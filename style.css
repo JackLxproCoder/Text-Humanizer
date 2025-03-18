@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    animation: fadeIn 1s ease-in;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.input-section:hover {
+    transform: translateY(-5px);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.response-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.response-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.5rem 1rem;
+    background: #2ecc71;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #27ae60;
+}
+
+.developer {
+    text-align: center;
+    margin-top: 2rem;
+    animation: slideUp 1s ease-in;
+}
+
+.developer a {
+    color: #3498db;
+    text-decoration: none;
+    position: relative;
+}
+
+.developer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.developer a:hover::after {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
